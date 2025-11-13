@@ -125,14 +125,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ==================== Contact Form Validation & Popup ==================== */
-document.getElementById("contactForm").addEventListener("submit", function (e) {
+
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
   e.preventDefault();
 
+  const form = e.target;
+  const sendBtn = document.getElementById("sendBtn");
   const name = document.getElementById("name");
   const email = document.getElementById("email");
   const subject = document.getElementById("subject");
   const message = document.getElementById("message");
-  const sendBtn = document.getElementById("sendBtn");
 
   let valid = true;
 
@@ -153,14 +155,30 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   if (!valid) return;
 
   sendBtn.classList.add("loading");
-  setTimeout(() => {
-    e.target.submit();
-    document.getElementById("successPopup").style.display = "flex";
+
+  try {
+    // ✅ Send form data to FormSubmit using fetch (AJAX)
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+    });
+
+    if (response.ok) {
+      // Show success popup
+      document.getElementById("successPopup").style.display = "flex";
+      form.reset(); // Clear fields
+    } else {
+      alert("Something went wrong. Please try again later.");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Error sending message. Please check your connection.");
+  } finally {
     sendBtn.classList.remove("loading");
-  }, 800);
+  }
 });
 
 // Close popup
 document.getElementById("closePopup").addEventListener("click", () => {
-document.getElementById("successPopup").style.display = "none";
+  document.getElementById("successPopup").style.display = "none";
 });
