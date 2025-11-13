@@ -182,3 +182,13 @@ document.getElementById("contactForm").addEventListener("submit", async function
 document.getElementById("closePopup").addEventListener("click", () => {
   document.getElementById("successPopup").style.display = "none";
 });
+
+
+
+
+// Debug helper: logs device width at load/resizes
+(function(){
+  function logW(){ console.log('viewport width:', window.innerWidth); }
+  window.addEventListener('load', logW);
+  window.addEventListener('resize', logW);
+})();
