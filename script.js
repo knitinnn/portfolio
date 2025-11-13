@@ -153,7 +153,6 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   if (!valid) return;
 
   sendBtn.classList.add("loading");
-
   setTimeout(() => {
     e.target.submit();
     document.getElementById("successPopup").style.display = "flex";
