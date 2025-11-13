@@ -74,8 +74,6 @@ body {
 
 /* ==================== Navigation ==================== */
 
-
-/* ==================== Navigation ==================== */
 #navbar {
   position: fixed;
   top: 0;
@@ -116,7 +114,6 @@ body {
   text-decoration: none;
 }
 
-/* Glow hover */
 .nav-link::before {
   content: "";
   position: absolute;
@@ -134,7 +131,6 @@ body {
   transform: scale(1.05);
 }
 
-
 .nav-link:hover {
   color: #a5f3fc;
   text-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
@@ -150,12 +146,12 @@ body {
   background: linear-gradient(90deg, var(--primary), var(--secondary));
   transition: width 0.3s ease;
 }
- 
+
 .nav-link.active {
   color: #34d399;
   text-shadow: 0 0 10px rgba(52, 211, 153, 0.6);
 }
- 
+
 .nav-link.active::before {
   opacity: 0.4;
   transform: scale(1.05);
@@ -205,7 +201,6 @@ body {
   padding: 0 40px;
 }
 
-/* Hero Image */
 .hero-image {
   flex: 1 1 350px;
   text-align: center;
@@ -222,7 +217,6 @@ body {
   align-items: center;
 }
 
-/* Glow Layers */
 .glow-layer {
   position: absolute;
   inset: 0;
@@ -233,11 +227,22 @@ body {
   animation: glowPulse 4s infinite alternate ease-in-out;
 }
 
-.layer1 { background: radial-gradient(circle, rgba(59,130,246,0.4), transparent 70%); }
-.layer2 { background: radial-gradient(circle, rgba(16,185,129,0.3), transparent 70%); animation-delay: 1s; }
-.layer3 { background: radial-gradient(circle, rgba(147,51,234,0.25), transparent 70%); animation-delay: 2s; }
+.layer1 {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.4), transparent 70%);
+}
+.layer2 {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.3), transparent 70%);
+  animation-delay: 1s;
+}
+.layer3 {
+  background: radial-gradient(
+    circle,
+    rgba(147, 51, 234, 0.25),
+    transparent 70%
+  );
+  animation-delay: 2s;
+}
 
-/* Border Ring */
 .border-ring {
   width: 350px;
   height: 350px;
@@ -248,14 +253,12 @@ body {
   position: relative;
 }
 
-/* Profile Image */
 .border-ring img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
 
-  /* ⭐ Adjust your face position (slightly downward) */
   object-position: 50% 18%;
 
   transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -263,13 +266,18 @@ body {
 
 .border-ring:hover img {
   transform: scale(1.1);
-  box-shadow: 0 10px 25px rgba(59,130,246,0.3);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
 }
 
-/* Glow Animation */
 @keyframes glowPulse {
-  0% { transform: scale(1); opacity: 0.3; }
-  100% { transform: scale(1.1); opacity: 0.5; }
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
 }
 
 /* ==================== Hero Text ==================== */
@@ -299,7 +307,6 @@ body {
   font-size: 1.2rem;
 }
 
-/* Buttons + Social Icons */
 .hero-buttons {
   display: flex;
   gap: 15px;
@@ -330,7 +337,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .hero-container {
     flex-direction: column;
@@ -341,18 +347,21 @@ body {
     margin: 30px 0 0 0;
     text-align: center;
   }
-  .image-wrapper, .border-ring {
+  .image-wrapper,
+  .border-ring {
     width: 260px;
     height: 260px;
   }
-  .hero-text h1 { font-size: 3.2rem; }
-  .hero-text h2 { font-size: 2rem; }
+  .hero-text h1 {
+    font-size: 3.2rem;
+  }
+  .hero-text h2 {
+    font-size: 2rem;
+  }
 }
 
-
-
-
 /* ==================== About Section ==================== */
+
 .about-section {
   padding: 100px 0;
   background-color: var(--darker);
@@ -361,8 +370,7 @@ body {
 .section-title {
   text-align: center;
   font-size: 2.5rem;
-  margin-top: -50px; 
-  
+  margin-top: -50px;
 }
 
 .about-content {
@@ -376,19 +384,17 @@ body {
   width: 280px;
   height: 280px;
   border-radius: 15px;
-  /* border: 4px solid #1e293b; */
   object-fit: cover;
   object-position: center top;
-   border: 1.5px solid #1e293b;
+  border: 1.5px solid #1e293b;
   transition: all 0.3s ease;
 }
 
-  .about-image:hover {
+.about-image:hover {
   transform: translateY(-6px);
   border-color: var(--primary);
   box-shadow: 0 0 20px rgba(14, 165, 233, 0.25);
   transition: all 0.3s ease;
-  /* Optional for consistent animation */
 }
 
 .about-text {
@@ -414,8 +420,6 @@ body {
   margin-bottom: 25px;
 }
 
-
-/* Base box styling */
 .info-box {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
@@ -423,33 +427,32 @@ body {
   align-items: flex-start;
   padding: 0.6rem 0.5rem;
   padding-bottom: 10px;
-  border: 1.5px solid #333; /* simple neutral border */
+  border: 1.5px solid #333;
   border-radius: 8px;
-  background-color: #0f172a; /* matches your dark theme */
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  background-color: #0f172a;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
   cursor: pointer;
 }
-.education-h4{
+.education-h4 {
   font-size: 1.5rem;
   padding-bottom: 5px;
 }
-.education-p{
+.education-p {
   font-size: 1rem;
   padding-top: 5px;
-
 }
-/* Icon */
+
 .info-box i {
   font-size: 1.5rem;
   color: #007bff;
   margin-right: 1rem;
 }
 
-/* Hover popup effect (subtle lift) */
 .info-box:hover {
-  transform: translateY(-5px); /* gentle lift */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* simple shadow */
-  border-color: #007bff; /* optional: highlight border slightly */
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  border-color: #007bff;
 }
 
 /* ==================== Experience Timeline ==================== */
@@ -479,7 +482,6 @@ body {
   margin-bottom: 40px;
 }
 
-/* Dots perfectly centered */
 .timeline-dot {
   position: absolute;
   left: -2px;
@@ -493,14 +495,14 @@ body {
   transition: background 0.3s ease;
 }
 
-/* Box style (matches info-box) */
 .timeline-content {
   margin-left: 30px;
   background-color: #0f172a;
   border: 1.5px solid #333;
   border-radius: 8px;
   padding: 0.8rem 1rem;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
   cursor: pointer;
 }
 
@@ -510,7 +512,6 @@ body {
   border-color: #007bff;
 }
 
-/* Company name and role */
 .timeline-header {
   display: flex;
   flex-direction: column;
@@ -528,11 +529,10 @@ body {
 
 .role-duration {
   font-size: 0.95rem;
-  color: #60a5fa; /* blue accent for role and duration */
+  color: #60a5fa;
   margin: 3px 0 0 0;
 }
 
-/* Description */
 .timeline-content p {
   font-size: 1rem;
   margin: 0;
@@ -540,25 +540,16 @@ body {
   line-height: 1.5;
 }
 
-
-
-/* ==================== Skills Section ==================== */
-
-
 /* ==================== Skills Section ==================== */
 .skills-section {
- background-color: var(--darker);
+  background-color: var(--darker);
   padding: 40px 0;
   text-align: center;
 }
 
-/* Heading */
 .section-title-myskills {
   font-size: 2.5rem;
-  /* Add more gradient-text styling as needed */
 }
-
-/* Flex wrapper for skills and image */
 .skills-flex-wrapper {
   display: flex;
   align-items: flex-start;
@@ -567,27 +558,23 @@ body {
   width: 100%;
 }
 
-
 .skills-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
-  margin-right: 40px; /* Smaller gap keeps cards further left */
+  margin-right: 40px;
   margin-left: 0;
   margin-left: -80px;
 }
 
-
-/* Skill card box size */
 .skill-card {
   background: #0f172a;
   border: 1.5px solid #1e293b;
   border-radius: 12px;
   padding: 10px;
-  width: 350px; /* Or 100% if you want the grid to auto-size */
+  width: 350px;
   transition: all 0.3s ease;
   text-align: start;
-  
 }
 
 .skill-card:hover {
@@ -603,12 +590,11 @@ body {
 }
 
 .skill-card p {
- color: #b0b0b0;
+  color: #b0b0b0;
   line-height: 1.6;
   font-size: 1rem;
 }
 
-/* Image on the right side of the skills */
 .skills-image {
   height: 400px;
   border-radius: 15px;
@@ -616,20 +602,15 @@ body {
   margin-top: 10px;
   border: 1.5px solid #1e293b;
   transition: all 0.3s ease;
-  /* Add object-fit: cover; if needed */
 }
-
 
 .skills-image:hover {
   transform: translateY(-6px);
   border-color: var(--primary);
   box-shadow: 0 0 20px rgba(14, 165, 233, 0.25);
   transition: all 0.3s ease;
-  /* Optional for consistent animation */
 }
 
-
-/* Responsive fix */
 @media (max-width: 1200px) {
   .skills-flex-wrapper {
     flex-direction: column;
@@ -637,7 +618,7 @@ body {
   }
   .skills-image {
     margin-left: 0;
-    margin-top: 40px; /* Adds space above the image when stacked below */
+    margin-top: 40px;
     height: 260px;
   }
   .skills-container {
@@ -650,9 +631,6 @@ body {
     width: 90%;
   }
 }
-
-
-
 
 /* ==================== Tools & Technologies ==================== */
 .tools-section {
@@ -750,7 +728,6 @@ body {
   align-self: flex-start;
 }
 
-/* Optional fade-up animation for smooth scroll reveal */
 @keyframes fadeUp {
   0% {
     opacity: 0;
@@ -776,16 +753,10 @@ body {
   animation: fadeUp 0.6s ease-out forwards;
 }
 
-
-
-/* ==================== Contact Section ==================== */
-
-
-
 /* ==================== Contact Section ==================== */
 .contact-section {
   padding: 100px 0;
-  background: #0f1123; /* matches your screenshot */
+  background: #0f1123;
   color: #fff;
 }
 
@@ -808,7 +779,6 @@ body {
   justify-content: center;
 }
 
-/* LEFT SIDE */
 .contact-left {
   flex: 1 1 350px;
 }
@@ -844,7 +814,6 @@ body {
   color: #9ca3af;
 }
 
-/* Social Buttons */
 .social-buttons {
   display: flex;
   gap: 15px;
@@ -865,7 +834,6 @@ body {
   background: rgba(96, 165, 250, 0.1);
 }
 
-/* Resume Button */
 .resume-btn {
   margin-top: 20px;
   background: linear-gradient(90deg, #4f8aff, #a855f7);
@@ -884,8 +852,6 @@ body {
   opacity: 0.9;
 }
 
-/* RIGHT BOX (Form Box) */
-/* Default style */
 .contact-right {
   flex: 1 1 450px;
   background: #0c1627;
@@ -895,19 +861,16 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Hover: pop-up & highlight like left card */
 .contact-right:hover {
   transform: translateY(-6px);
   border-color: #4f8aff;
   box-shadow: 0 0 20px rgba(79, 138, 255, 0.25);
 }
 
-
 .contact-right h3 {
   margin-bottom: 25px;
 }
 
-/* Form Styling */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -933,14 +896,12 @@ body {
   transition: all 0.25s ease;
 }
 
-/* APPLY GLOW LIKE MESSAGE + PHONE BOX */
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #4f8aff;
   box-shadow: 0 0 10px rgba(79, 138, 255, 0.35);
   outline: none;
 }
-
 
 .send-btn {
   margin-top: 10px;
@@ -962,7 +923,6 @@ body {
   opacity: 0.9;
 }
 
-
 /* ============ SUCCESS POPUP ============ */
 .success-popup {
   position: fixed;
@@ -970,7 +930,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: none;
   justify-content: center;
   align-items: center;
@@ -983,7 +943,7 @@ body {
   border-radius: 12px;
   text-align: center;
   border: 1px solid #334155;
-  box-shadow: 0 0 20px rgba(79,138,255,0.35);
+  box-shadow: 0 0 20px rgba(79, 138, 255, 0.35);
 }
 
 .popup-box h3 {
@@ -1020,10 +980,11 @@ body {
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-/* Hide text when loading */
 .loading .btn-text {
   display: none;
 }
@@ -1039,7 +1000,7 @@ body {
 }
 
 .resume-btn {
-  display: inline-flex; /* makes it behave like a button */
+  display: inline-flex;
   align-items: center;
   gap: 8px;
 
@@ -1048,7 +1009,7 @@ body {
   padding: 12px 22px;
   border-radius: 10px;
   cursor: pointer;
-  text-decoration: none;      /* removes underline */
+  text-decoration: none;
   font-size: 1rem;
   border: none;
   transition: 0.3s;
@@ -1057,8 +1018,6 @@ body {
 .resume-btn:hover {
   opacity: 0.9;
 }
-
-
 
 /* ==================== Footer ==================== */
 .footer {
@@ -1086,7 +1045,6 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .back-to-top:hover {
   transform: translateY(-4px);
 }

@@ -25,7 +25,6 @@ menuToggle.addEventListener("click", () => {
 const navItems = document.querySelectorAll(".nav-link");
 const logo = document.querySelector(".logo");
 
-// Smooth scroll function
 function smoothScroll(targetId) {
   const section = document.querySelector(targetId);
   if (section) {
@@ -36,7 +35,6 @@ function smoothScroll(targetId) {
   }
 }
 
-// Navbar links smooth scroll
 navItems.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
@@ -50,7 +48,6 @@ navItems.forEach((link) => {
   });
 });
 
-// Logo smooth scroll to home (updated for "Nitin" logo)
 logo.addEventListener("click", (e) => {
   e.preventDefault();
   smoothScroll("#home");
@@ -77,7 +74,6 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  // Back to top button visibility
   const backToTop = document.getElementById("back-to-top");
   backToTop.style.display = scrollY > 300 ? "flex" : "none";
 });
@@ -167,5 +163,5 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
 // Close popup
 document.getElementById("closePopup").addEventListener("click", () => {
-  document.getElementById("successPopup").style.display = "none";
+document.getElementById("successPopup").style.display = "none";
 });
