@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f4f8;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  background: #06bcb7;
+  color: #fff;
+  padding: 28px 0 18px 0;
+  box-shadow: 0 3px 10px rgba(6, 188, 183, 0.08);
+  text-align: center;
+}
+
+#header h1 {
+  font-size: 2.4em;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+main {
+  flex: 1 0 auto;
+  width: 330px;
+  max-width: 94vw;
+  margin: 50px auto 20px auto;
+  background: #fff;
+  padding: 34px 22px 24px 22px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px #cbe2e4;
+  text-align: center;
+}
+
+.container {
+  margin-bottom: 12px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-gap: 12px;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.button {
+  width: 80px;
+  height: 80px;
+  background: #eaeaea;
+  font-size: 2.4em;
+  color: #634caf;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  font-weight: bold;
+  transition: background 0.18s, color 0.15s, box-shadow 0.18s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.button.X {
+  background: #ffe96c !important;
+  color: #413c00;
+}
+
+.button.O {
+  background: #feb8e4 !important;
+  color: #700447;
+}
+
+.button:hover:enabled {
+  background: #d6feff !important;
+}
+
+.winner {
+  min-height: 38px;
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #444;
+  margin-bottom: 9px;
+  margin-top: 8px;
+}
+
+.resetBtn {
+  background: #06bcb7;
+  color: #fff;
+  border: none;
+  padding: 11px 32px;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin-top: 8px;
+  font-weight: 500;
+  transition: background 0.2s;
+  box-shadow: 0 3px 14px rgba(6, 188, 183, 0.03);
+}
+
+.resetBtn:hover {
+  background: #03919c;
+}
+
+.footer {
+  width: 100%;
+  background: #1e2c33;
+  color: #f2f8f9;
+  text-align: center;
+  padding: 16px 0 14px 0;
+  font-size: 1em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  box-shadow: 0 -2px 12px rgba(30,44,51,0.07);
+  position: relative;
+  bottom: 0;
+}
+
+.footer-container {
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+  main {
+    width: 98vw;
+    padding: 10vw 1vw 7vw 1vw;
+  }
+  .buttons {
+    grid-template-columns: repeat(3, 21vw);
+    grid-gap: 2vw;
+  }
+  .button {
+    width: 21vw;
+    height: 21vw;
+    min-width: 52px;
+    min-height: 52px;
+    font-size: 2em;
+  }
+}
