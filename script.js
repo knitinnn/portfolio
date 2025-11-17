@@ -1,11 +1,8 @@
 /* ==================== Force page reload at Home ==================== */
 
-// Prevent browser from restoring scroll position
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
 }
-
-// Always open at top when page loads
 window.addEventListener("load", () => {
   window.scrollTo({
     top: 0,
@@ -14,6 +11,7 @@ window.addEventListener("load", () => {
 });
 
 /* ==================== Mobile Menu Toggle ==================== */
+
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
@@ -21,7 +19,8 @@ menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
 
-/* ==================== Smooth Scroll for Links & Logo ==================== */
+// ==================== Smooth Scroll for Links & Logo ==================== 
+
 const navItems = document.querySelectorAll(".nav-link");
 const logo = document.querySelector(".logo");
 
@@ -128,14 +127,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
   e.preventDefault();
-
   const form = e.target;
-  const sendBtn = document.getElementById("sendBtn");
   const name = document.getElementById("name");
   const email = document.getElementById("email");
   const subject = document.getElementById("subject");
   const message = document.getElementById("message");
-
   let valid = true;
 
   [name, email, subject, message].forEach((field) => {
@@ -152,43 +148,43 @@ document.getElementById("contactForm").addEventListener("submit", async function
     valid = false;
   }
 
-  if (!valid) return;
+  if (!valid) {
+    return;
+  }
 
+  const sendBtn = document.getElementById("sendBtn");
   sendBtn.classList.add("loading");
 
   try {
-    // ✅ Send form data to FormSubmit using fetch (AJAX)
     const response = await fetch(form.action, {
       method: "POST",
       body: new FormData(form),
     });
 
     if (response.ok) {
-      // Show success popup
-      document.getElementById("successPopup").style.display = "flex";
-      form.reset(); // Clear fields
+     
+      document.getElementById("successPopup").style.display = "block";
+      form.reset();
     } else {
       alert("Something went wrong. Please try again later.");
     }
   } catch (error) {
-    console.error(error);
     alert("Error sending message. Please check your connection.");
   } finally {
     sendBtn.classList.remove("loading");
   }
 });
 
-// Close popup
+
 document.getElementById("closePopup").addEventListener("click", () => {
   document.getElementById("successPopup").style.display = "none";
+  window.location.href = "/"; // Change this to your homepage route if needed
 });
 
 
-
-
-// Debug helper: logs device width at load/resizes
 (function(){
   function logW(){ console.log('viewport width:', window.innerWidth); }
   window.addEventListener('load', logW);
   window.addEventListener('resize', logW);
 })();
+

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nitin's Portfolio</title>
-     <link rel="icon" type="image/png" href="/Images/logocircle.png" />
+    <link rel="icon" type="image/png" href="/Images/logocircle.png" />
 
     <link
       rel="stylesheet"
@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
     <!-- ==================== Navigation ==================== -->
     <nav id="navbar">
       <div class="container nav-container">
@@ -360,20 +359,27 @@
             <form
               id="contactForm"
               class="contact-form"
-              action="https://formsubmit.co/knitin14.work@gmail.com"
+              action="https://api.web3forms.com/submit"
               method="POST"
             >
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="table" />
+        
               <input
                 type="hidden"
-                name="_subject"
+                name="access_key"
+                value="7611f8e9-9242-45ef-b0fa-c8abb8dcaf88"
+              />
+
+  
+              <input
+                type="hidden"
+                name="subject"
                 value="New Portfolio Contact!"
               />
+
               <input
                 type="hidden"
-                name="_autoresponse"
-                value="Thank you for reaching out! I have received your message and will get back to you soon."
+                name="redirect"
+                value="https://yourdomain.com/thank-you.html"
               />
 
               <div class="form-row">
@@ -410,22 +416,18 @@
               ></textarea>
 
               <button type="submit" class="send-btn" id="sendBtn">
-                <span class="btn-text"
-                  ><i class="fas fa-paper-plane"></i> Send Message</span
-                >
+                <span class="btn-text">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </span>
                 <span class="btn-loader"></span>
               </button>
             </form>
           </div>
-
-          <div id="successPopup" class="success-popup">
-            <div class="popup-box">
-              <h3>Message Sent!</h3>
-              <p>
-                Your message was sent successfully. I will get back to you soon.
-              </p>
-              <button id="closePopup">Close</button>
-            </div>
+          <div id="successPopup">
+            <p class="successPopup-msg">
+              Your message was sent successfully. I will get back to you soon.
+            </p>
+            <button id="closePopup">OK</button>
           </div>
         </div>
       </div>
