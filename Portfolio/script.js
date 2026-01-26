@@ -178,7 +178,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
 document.getElementById("closePopup").addEventListener("click", () => {
   document.getElementById("successPopup").style.display = "none";
-  window.location.href = "https://knitinnn.github.io/portfolio";
+  window.location.href = "/"; // Change this to your homepage route if needed
 });
 
 
