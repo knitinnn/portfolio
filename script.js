@@ -19,7 +19,7 @@ menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
 
-// ==================== Smooth Scroll for Links & Logo ==================== 
+// ==================== Smooth Scroll for Links & Logo ====================
 
 const navItems = document.querySelectorAll(".nav-link");
 const logo = document.querySelector(".logo");
@@ -85,7 +85,7 @@ document.getElementById("back-to-top").addEventListener("click", () => {
 /* ==================== Changing Role Text Animation ==================== */
 const roles = [
   { text: "Full Stack", color: "#3b82f6", font: "'Poppins', sans-serif" },
-  { text: "Frontend", color: "#10b981", font: "'Montserrat', sans-serif" },
+  { text: "Backend", color: "#10b981", font: "'Montserrat', sans-serif" },
   { text: "Web", color: "#f59e0b", font: "'Roboto Slab', serif" },
 ];
 
@@ -108,7 +108,7 @@ setInterval(() => {
 /* ==================== Section Scroll Reveal Animations ==================== */
 document.addEventListener("DOMContentLoaded", () => {
   const revealSections = document.querySelectorAll(
-    ".skills-section, .projects-section"
+    ".skills-section, .projects-section",
   );
 
   const observer = new IntersectionObserver(
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (entry.isIntersecting) entry.target.classList.add("visible");
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.2 },
   );
 
   revealSections.forEach((section) => observer.observe(section));
@@ -125,66 +125,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* ==================== Contact Form Validation & Popup ==================== */
 
-document.getElementById("contactForm").addEventListener("submit", async function (e) {
-  e.preventDefault();
-  const form = e.target;
-  const name = document.getElementById("name");
-  const email = document.getElementById("email");
-  const subject = document.getElementById("subject");
-  const message = document.getElementById("message");
-  let valid = true;
+document
+  .getElementById("contactForm")
+  .addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const name = document.getElementById("name");
+    const email = document.getElementById("email");
+    const subject = document.getElementById("subject");
+    const message = document.getElementById("message");
+    let valid = true;
 
-  [name, email, subject, message].forEach((field) => {
-    field.classList.remove("input-error");
-    if (field.value.trim() === "") {
-      field.classList.add("input-error");
-      valid = false;
-    }
-  });
-
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(email.value)) {
-    email.classList.add("input-error");
-    valid = false;
-  }
-
-  if (!valid) {
-    return;
-  }
-
-  const sendBtn = document.getElementById("sendBtn");
-  sendBtn.classList.add("loading");
-
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
+    [name, email, subject, message].forEach((field) => {
+      field.classList.remove("input-error");
+      if (field.value.trim() === "") {
+        field.classList.add("input-error");
+        valid = false;
+      }
     });
 
-    if (response.ok) {
-     
-      document.getElementById("successPopup").style.display = "block";
-      form.reset();
-    } else {
-      alert("Something went wrong. Please try again later.");
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value)) {
+      email.classList.add("input-error");
+      valid = false;
     }
-  } catch (error) {
-    alert("Error sending message. Please check your connection.");
-  } finally {
-    sendBtn.classList.remove("loading");
-  }
-});
 
+    if (!valid) {
+      return;
+    }
+
+    const sendBtn = document.getElementById("sendBtn");
+    sendBtn.classList.add("loading");
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+      });
+
+      if (response.ok) {
+        document.getElementById("successPopup").style.display = "block";
+        form.reset();
+      } else {
+        alert("Something went wrong. Please try again later.");
+      }
+    } catch (error) {
+      alert("Error sending message. Please check your connection.");
+    } finally {
+      sendBtn.classList.remove("loading");
+    }
+  });
 
 document.getElementById("closePopup").addEventListener("click", () => {
   document.getElementById("successPopup").style.display = "none";
   window.location.href = "https://knitinnn.github.io/portfolio/"; // Change this to your homepage route if needed
 });
 
-
-(function(){
-  function logW(){ console.log('viewport width:', window.innerWidth); }
-  window.addEventListener('load', logW);
-  window.addEventListener('resize', logW);
+(function () {
+  function logW() {
+    console.log("viewport width:", window.innerWidth);
+  }
+  window.addEventListener("load", logW);
+  window.addEventListener("resize", logW);
 })();
-
