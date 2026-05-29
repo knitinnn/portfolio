@@ -3,28 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nitin's Portfolio</title>
+    <title>Nitin Kumar Kasturi — Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Full Stack Developer with 1 year of production experience building role-based web platforms using React.js, Node.js, TypeScript, and MySQL. View my projects, skills, and experience."
+    />
+    <meta
+      name="keywords"
+      content="Full Stack Developer, React, Node.js, TypeScript, Portfolio, Web Developer, Nitin Kumar"
+    />
+    <meta name="author" content="Nitin Kumar Kasturi" />
     <link rel="icon" type="image/png" href="Images/logocircle.png" />
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
     <!-- ==================== Navigation ==================== -->
     <nav id="navbar">
       <div class="container nav-container">
-        <a href="#home" class="logo gradient-text">Nitin.dev</a>
+        <a href="#home" class="logo">Nitin<span>.</span></a>
 
-        <button id="menu-toggle" class="menu-toggle">
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
           <i class="fas fa-bars"></i>
         </button>
 
@@ -33,7 +56,16 @@
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li>
+            <a
+              href="https://drive.google.com/file/d/1YqJoEUP0p_9u6lbtgcuMhxNozHDFuTn_/view"
+              target="_blank"
+              class="nav-resume-btn"
+              ><i class="fas fa-file-alt"></i> Resume</a
+            >
+          </li>
         </ul>
       </div>
     </nav>
@@ -41,156 +73,201 @@
     <!-- ==================== Hero Section ==================== -->
     <section id="home" class="hero">
       <div class="container hero-container">
-        <!-- Left Image -->
-        <div class="hero-image">
-          <div class="image-wrapper">
-            <div class="border-ring">
-              <img src="Images/nitin111.jpeg" alt="Profile Image" />
-            </div>
-            <div class="glow-layer layer1"></div>
-            <div class="glow-layer layer2"></div>
-            <div class="glow-layer layer3"></div>
-          </div>
-        </div>
-
-        <div class="hero-text">
-          <h1>Hi, I'm <span class="gradient-text">Nitin</span></h1>
-
-          <h2>
-            <span id="changing-role">Full Stack</span>
-            <span class="constant-text">Developer</span>
-          </h2>
-
-          <p>
-            I’m a Full Stack Developer who builds complete, high-performing web
-            applications — from sleek front-end interfaces to powerful back-end
-            systems. Let’s create something exceptional together.
+        <div class="hero-content">
+          <p class="hero-caption hero-animate hero-animate-delay-1">
+            Full Stack Developer • Node.js • React
           </p>
-
-          <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Hire Me</a>
-            <a href="#projects" class="btn btn-outline">View Work</a>
+          <h1 class="hero-title hero-animate hero-animate-delay-2">
+            Full Stack &amp; Backend<br />
+            Developer <span class="highlight">Building</span><br />
+            <span class="highlight">Reliable Digital Products</span>
+          </h1>
+          <p class="hero-description hero-animate hero-animate-delay-3">
+            1 year of production experience shipping role-based platforms — from
+            an LMS serving 180+ users to a WhatsApp CRM processing 1,000+
+            automated campaigns. Focused on clean architecture, secure APIs, and
+            polished frontend integration.
+          </p>
+          <div class="hero-buttons hero-animate hero-animate-delay-4">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a
+              href="https://drive.google.com/file/d/1YqJoEUP0p_9u6lbtgcuMhxNozHDFuTn_/view"
+              target="_blank"
+              class="btn btn-secondary"
+              ><i class="fas fa-download"></i> Resume</a
+            >
+            <a href="#contact" class="btn btn-ghost">Let's Talk →</a>
           </div>
-
-          <div class="social-links">
+          <div class="hero-social hero-animate hero-animate-delay-5">
             <a
               href="https://www.linkedin.com/in/kasturi-nitin-kumar-a55174250/"
               target="_blank"
-              class="social-icon"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
             <a
               href="https://github.com/knitinnn"
               target="_blank"
-              class="social-icon"
-            >
-              <i class="fab fa-github"></i>
-            </a>
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
             <a
               href="https://www.instagram.com/k_nitinnn/"
               target="_blank"
-              class="social-icon"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <!-- <a
               href="https://x.com/k_nitinnn"
               target="_blank"
-              class="social-icon"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
+              aria-label="Twitter"
+              ><i class="fab fa-x-twitter"></i
+            ></a> -->
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper hero-animate hero-animate-delay-6">
+          <div class="deco-dot deco-dot-1"></div>
+          <div class="deco-dot deco-dot-2"></div>
+          <div class="deco-dot deco-dot-3"></div>
+          <div class="hero-image-frame">
+            <img
+              src="Images/nitin111.jpeg"
+              alt="Nitin Kumar Kasturi — Full Stack Developer"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Stats Bar ==================== -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <div class="stat-number" data-target="2">0</div>
+            <div class="stat-label">Production Systems</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-1">
+            <div class="stat-number" data-target="180" data-suffix="+">0</div>
+            <div class="stat-label">Users Served</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-2">
+            <div class="stat-number" data-target="40" data-suffix="+">0</div>
+            <div class="stat-label">REST APIs Built</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-3">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label">Certifications</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ==================== About Section ==================== -->
-
-    <section id="about" class="about-section">
+    <section id="about" class="about-section section-padding">
       <div class="container">
-        <h2 class="section-title">
-          About <span class="gradient-text">Me</span>
-        </h2>
-        <div class="divider"></div>
+        <div class="section-header">
+          <p class="section-label reveal">Get to Know Me</p>
+          <h2 class="section-title reveal reveal-delay-1">About Me</h2>
+          <p class="section-subtitle reveal reveal-delay-2">
+            A developer driven by building impactful, production-ready systems
+            that solve real problems.
+          </p>
+        </div>
 
-        <div class="about-content">
-          <div class="about-image">
-            <img src="./Images/1212.jpg" alt="About Me" />
+        <div class="about-grid">
+          <div class="about-image-wrapper reveal">
+            <img src="Images/1212.jpg" alt="Nitin Kumar Kasturi" />
           </div>
 
           <div class="about-text">
-            <h3>Who am I?</h3>
-            <p>
-              I’m Nitin Kumar Kasturi, a Full Stack Developer with practical
-              experience in React, Node.js, Express, and MongoDB. I specialize
-              in building fast, responsive, and user-friendly web applications
-              that solve real-world problems. I enjoy transforming ideas into
-              functional products and continuously improving my skills. I’m also
-              expanding my expertise into Full Stack Development with AI,
-              integrating modern AI tools and automation to build smarter, more
-              powerful applications. I’m always eager to learn, experiment, and
-              collaborate with others to create meaningful digital experiences.
+            <div class="about-highlights reveal">
+              <span class="about-highlight-tag"
+                ><i class="fas fa-check-circle"></i> 1+ Year Production
+                Experience</span
+              >
+              <span class="about-highlight-tag"
+                ><i class="fas fa-check-circle"></i> 2 Live Systems</span
+              >
+              <span class="about-highlight-tag"
+                ><i class="fas fa-check-circle"></i> B.Tech CSE</span
+              >
+            </div>
+
+            <p class="reveal reveal-delay-1">
+              I'm Nitin Kumar Kasturi, a Full Stack Developer who builds
+              role-based web platforms that are secure, scalable, and
+              production-ready. I specialize in React.js, Node.js, TypeScript,
+              and MySQL — and I've shipped two end-to-end systems: an LMS
+              serving 100+ users and a WhatsApp CRM processing 1,000+ automated
+              campaigns.
+            </p>
+            <p class="reveal reveal-delay-2">
+              I'm currently expanding into Full Stack Development with AI,
+              integrating modern AI tools to build smarter, more powerful
+              applications. I care about clean code, maintainable architecture,
+              and delivering real business impact.
             </p>
 
-            <div class="info-box">
-              <i class="fas fa-graduation-cap"></i>
+            <!-- Education -->
+            <div class="education-card reveal reveal-delay-3">
+              <div class="edu-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
               <div>
-                <h4 class="education-h4">Education</h4>
-                <p class="education-p">
-                  B.Tech in Computer Science<br />
-                  Siddhartha Institute of Technology and Sciences, 2025
+                <h4>B.Tech in Computer Science &amp; Engineering</h4>
+                <p>
+                  Siddhartha Institute of Technology and Sciences, Hyderabad —
+                  2021–2025
                 </p>
               </div>
             </div>
 
-            <div class="about-buttons">
+            <!-- Certifications -->
+            <div class="certs-grid reveal reveal-delay-4">
+              <a
+                href="https://www.credly.com/badges/4720d52e-73c5-4b6d-9769-994ae8f22f13/public_url"
+                target="_blank"
+                class="cert-badge"
+              >
+                <i class="fab fa-google"></i>
+                <span>Google Cloud Computing</span>
+              </a>
+              <a
+                href="https://www.credly.com/badges/79ffa720-3131-4efa-8b3a-03fce470f182/public_url"
+                target="_blank"
+                class="cert-badge"
+              >
+                <i class="fas fa-laptop-code"></i>
+                <span>Web Dev — IBM</span>
+              </a>
+              <a
+                href="https://www.udemy.com/certificate/UC-6278e0bd-cb86-468e-8e73-83eebacf47e0/"
+                target="_blank"
+                class="cert-badge"
+              >
+                <i class="fas fa-database"></i>
+                <span>SQL Bootcamp — Udemy</span>
+              </a>
+              <a
+                href="https://drive.google.com/file/d/1KYbAGopI0X6gt2zxSZ-6AJb0AMkQsVDg/view"
+                target="_blank"
+                class="cert-badge"
+              >
+                <i class="fab fa-python"></i>
+                <span>Python — GUVI</span>
+              </a>
+            </div>
+
+            <div class="about-buttons reveal reveal-delay-5">
               <a
                 href="https://drive.google.com/file/d/1YqJoEUP0p_9u6lbtgcuMhxNozHDFuTn_/view"
                 target="_blank"
                 class="btn btn-primary"
-                >Download Resume</a
+                ><i class="fas fa-download"></i> Download Resume</a
               >
-              <a href="#contact" class="btn btn-outline">Contact Me</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experience Timeline -->
-        <div class="experience">
-          <h3>My <span class="gradient-text">Experience</span></h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <h4 class="company-name">Catchy Systems</h4>
-                  <p class="role-duration">
-                    Full Stack Developer • 2025 - Present
-                  </p>
-                </div>
-                <p>
-                  Designed and developed modern web applications using the MERN
-                  stack. Focused on scalability and user experience.
-                </p>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <h4 class="company-name">Ventrix Media</h4>
-                  <p class="role-duration">
-                    Google Ads Executive • Apr 2025 - Oct 2025
-                  </p>
-                </div>
-                <p>
-                  Created, managed and optimized Google Ads campaigns to improve
-                  ROI and drive targeted traffic.
-                </p>
-              </div>
+              <a href="#contact" class="btn btn-secondary">Contact Me</a>
             </div>
           </div>
         </div>
@@ -198,191 +275,334 @@
     </section>
 
     <!-- ==================== Skills Section ==================== -->
-
-    <section id="skills" class="skills-section">
+    <section id="skills" class="skills-section section-padding">
       <div class="container">
-        <div class="skills-heading">
-          <h2 class="section-title-myskills">
-            My <span class="gradient-text">Skills</span>
+        <div class="section-header">
+          <p class="section-label reveal">What I Work With</p>
+          <h2 class="section-title reveal reveal-delay-1">
+            Skills &amp; Tech Stack
           </h2>
+          <p class="section-subtitle reveal reveal-delay-2">
+            Technologies and tools I use to build production-ready applications.
+          </p>
         </div>
-        <div class="divider"></div>
-        <div class="skills-flex-wrapper">
-          <div class="skills-container">
-            <div class="skill-card">
+
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <div class="skill-card-header">
+              <div class="skill-card-icon">
+                <i class="fas fa-palette"></i>
+              </div>
               <h3>Frontend</h3>
-              <p>▶ HTML5</p>
-              <p>▶ CSS3</p>
-              <p>▶ JavaScript (ES6+)</p>
-              <p>▶ React.js</p>
-              <p>▶ BootStrap</p>
-              <p>▶ REST API Integration</p>
             </div>
-            <div class="skill-card">
-              <h3>Backend</h3>
-              <p>▶ Node.js</p>
-              <p>▶ Express.js</p>
-              <p>▶ RESTful APIs</p>
-              <p>▶ Authentication(JWT)</p>
-              <p>▶ MVC Architecture</p>
-            </div>
-            <div class="skill-card">
-              <h3>Database & Deployment</h3>
-              <p>▶ MySQL</p>
-              <p>▶ MongoDB</p>
-              <p>▶ Sql lite</p>
-              <p>▶ Git / GitHub</p>
-              <p>▶ Vercel / Netlify</p>
-            </div>
-            <div class="skill-card">
-              <h3>Tools & Other Skills</h3>
-              <p>▶ Postman</p>
-              <p>▶ VS Code</p>
-              <p>▶ Figma</p>
-              <p>▶ PhotoShop</p>
-              <p>▶ Google Ads</p>
-              <p>▶ Debugging & Problem Solving</p>
+            <div class="skill-card-items">
+              <span class="skill-item">HTML5 &amp; CSS3</span>
+              <span class="skill-item">JavaScript (ES6+)</span>
+              <span class="skill-item">React.js</span>
+              <span class="skill-item">Bootstrap</span>
+              <span class="skill-item">REST API Integration</span>
             </div>
           </div>
 
-          <img src="./Images/me-1.png" alt="My Image" class="skills-image" />
+          <div class="skill-card reveal reveal-delay-1">
+            <div class="skill-card-header">
+              <div class="skill-card-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <h3>Backend</h3>
+            </div>
+            <div class="skill-card-items">
+              <span class="skill-item">Node.js &amp; Express.js</span>
+              <span class="skill-item">TypeScript</span>
+              <span class="skill-item">RESTful API Design</span>
+              <span class="skill-item">JWT Authentication</span>
+              <span class="skill-item">MVC Architecture</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal reveal-delay-2">
+            <div class="skill-card-header">
+              <div class="skill-card-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <h3>Database &amp; ORM</h3>
+            </div>
+            <div class="skill-card-items">
+              <span class="skill-item">MySQL</span>
+              <span class="skill-item">MongoDB</span>
+              <span class="skill-item">SQLite</span>
+              <span class="skill-item">Sequelize ORM</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal reveal-delay-3">
+            <div class="skill-card-header">
+              <div class="skill-card-icon">
+                <i class="fas fa-bolt"></i>
+              </div>
+              <h3>Real-Time &amp; Automation</h3>
+            </div>
+            <div class="skill-card-items">
+              <span class="skill-item">Socket.IO</span>
+              <span class="skill-item">Webhook Integration</span>
+              <span class="skill-item">Queue Processing</span>
+              <span class="skill-item">Scheduled Jobs</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal reveal-delay-4">
+            <div class="skill-card-header">
+              <div class="skill-card-icon">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <h3>DevOps &amp; Deploy</h3>
+            </div>
+            <div class="skill-card-items">
+              <span class="skill-item">Docker</span>
+              <span class="skill-item">GitHub Actions (CI/CD)</span>
+              <span class="skill-item">Vercel / Render / Railway</span>
+              <span class="skill-item">Git &amp; GitHub</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal reveal-delay-5">
+            <div class="skill-card-header">
+              <div class="skill-card-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>Tools &amp; Other</h3>
+            </div>
+            <div class="skill-card-items">
+              <span class="skill-item">Postman</span>
+              <span class="skill-item">VS Code</span>
+              <span class="skill-item">Figma</span>
+              <span class="skill-item">Google Ads</span>
+              <span class="skill-item">Problem Solving</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ==================== Projects Section ==================== -->
-
-    <section id="projects" class="projects-section">
+    <section id="projects" class="projects-section section-padding">
       <div class="container">
-        <h2 class="section-title">
-          Featured <span class="gradient-text">Projects</span>
-        </h2>
-        <div class="divider"></div>
+        <div class="section-header">
+          <p class="section-label reveal">What I've Built</p>
+          <h2 class="section-title reveal reveal-delay-1">Featured Projects</h2>
+          <p class="section-subtitle reveal reveal-delay-2">
+            Production systems I've designed, built, and shipped — solving real
+            problems for real users.
+          </p>
+        </div>
 
         <div class="projects-grid">
-          <div class="project-card">
-            <h3>Personal Portfolio</h3>
-            <p>
-              A responsive and animated personal portfolio built using HTML,
-              CSS, and JavaScript showcasing my projects and experience.
-            </p>
-            <a href="" class="btn btn-primary">View Project</a>
+          <!-- Project 1: LMS -->
+          <div class="project-card reveal">
+            <div class="project-info">
+              <span class="project-category-badge-inline">Full Stack / LMS</span>
+              <h3>Learning Management System</h3>
+              <p class="project-tagline">
+                Consolidating 5 tools into one platform for a coaching institute
+              </p>
+              
+              <ul class="project-highlights-list">
+                <li>Consolidated 5 legacy tools into a single integrated academic platform</li>
+                <li>Built an MCQ assessment engine with real-time automated scoring</li>
+                <li>Implemented role-based access control (RBAC) across portal roles</li>
+              </ul>
+
+              <div class="project-tags">
+                <span>React.js</span><span>Node.js</span><span>MySQL</span>
+                <span>Socket.IO</span>
+              </div>
+              <div class="project-metrics">
+                <div class="project-metric">
+                  <span class="metric-value">180+</span>
+                  <span class="metric-label">Users</span>
+                </div>
+                <div class="project-metric">
+                  <span class="metric-value">35%</span>
+                  <span class="metric-label">↑ Completion</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="projects/lms/index.html" class="btn btn-primary btn-sm">
+                  View Details <i class="fas fa-arrow-right" style="margin-left: 6px;"></i>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="project-card">
-            <h3>Event Management System</h3>
-            <p>
-              A full-stack event management app using the MERN stack for
-              organizing, tracking, and completing daily tasks efficiently.
-            </p>
-            <a class="btn btn-primary">View Project</a>
+          <!-- Project 2: WhatsApp CRM -->
+          <div class="project-card reveal">
+            <div class="project-info">
+              <span class="project-category-badge-inline">SaaS / CRM</span>
+              <h3>WhatsApp CRM Platform</h3>
+              <p class="project-tagline">
+                Multi-tenant CRM for managing contacts, campaigns, and WhatsApp sessions
+              </p>
+              
+              <ul class="project-highlights-list">
+                <li>Created a multi-tenant dashboard managing campaigns and contacts</li>
+                <li>Integrated Baileys automation engine with anti-spam rate limits</li>
+                <li>Embedded Puter AI for copywriting and Langbly for translations</li>
+              </ul>
+
+              <div class="project-tags">
+                <span>React.js</span><span>Node.js</span><span>MySQL</span>
+                <span>Puter AI</span>
+              </div>
+              <div class="project-metrics">
+                <div class="project-metric">
+                  <span class="metric-value">2,000+</span>
+                  <span class="metric-label">Contacts</span>
+                </div>
+                <div class="project-metric">
+                  <span class="metric-value">94%</span>
+                  <span class="metric-label">Delivery Rate</span>
+                </div>
+              </div>
+              <div class="project-actions">
+                <a href="projects/whatsapp-crm/index.html" class="btn btn-primary btn-sm">
+                  View Details <i class="fas fa-arrow-right" style="margin-left: 6px;"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Experience Section ==================== -->
+    <section id="experience" class="experience-section section-padding">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label reveal">Where I've Worked</p>
+          <h2 class="section-title reveal reveal-delay-1">Experience</h2>
+          <p class="section-subtitle reveal reveal-delay-2">
+            Professional roles where I've shipped production code and delivered
+            real impact.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4 class="company-name">CatchySystem Technologies Pvt Ltd</h4>
+                <p class="role-duration">
+                  Full Stack Developer • Jul 2025 – Present
+                </p>
+              </div>
+              <ul class="timeline-list">
+                <li>
+                  Designed JWT-based authentication with registration, login,
+                  token refresh, and role-based access control across 4 user
+                  types, standardized across company projects.
+                </li>
+                <li>
+                  Built and maintained 40+ REST API endpoints; implemented 20+
+                  permission rules via RBAC middleware for secure production
+                  access.
+                </li>
+                <li>
+                  Optimized backend performance by resolving 8 database N+1
+                  query issues using Sequelize eager loading — reduced query
+                  counts by 60% and improved response time from 480ms to 130ms.
+                </li>
+                <li>
+                  Refactored legacy JavaScript modules to TypeScript and built
+                  15+ reusable React components, cutting frontend development
+                  time by 30%.
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div class="project-card">
-            <h3>Tic-Tac-Toe/Random Number Guess Games</h3>
-            <p>
-              Built Tic-Tac-Toe and Number Guess games using basic logic and
-              user input..
-            </p>
-            <a
-              href="./Games-js/index.html"
-              target="_blank"
-              class="btn btn-primary"
-              >View Project</a
-            >
+          <div class="timeline-item reveal reveal-delay-1">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4 class="company-name">Ventrix Media</h4>
+                <p class="role-duration">
+                  Google Ads Executive • Jan 2025 – June 2025
+                </p>
+              </div>
+              <p>
+                Created, managed and optimized Google Ads campaigns to improve
+                ROI and drive targeted traffic for clients.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ==================== Contact Section ==================== -->
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section section-padding">
       <div class="container">
-        <h2 class="section-title">
-          Get In <span class="gradient-text">Touch</span>
-        </h2>
-
-        <p class="contact-subtitle">
-          Have a vision in mind? I’d love to help you turn it into reality —
-          let’s talk!
-        </p>
+        <div class="section-header">
+          <p class="section-label reveal">Let's Work Together</p>
+          <h2 class="section-title reveal reveal-delay-1">Get In Touch</h2>
+          <p class="section-subtitle reveal reveal-delay-2">
+            Have a project in mind or just want to chat? I'd love to hear from
+            you — let's build something great together.
+          </p>
+        </div>
 
         <div class="contact-wrapper">
-          <div class="contact-left">
+          <div class="contact-left reveal">
             <h3>Let's Connect</h3>
 
-            <div class="info-box clickable">
-              <a href="mailto:nitinkumarkasturi@gmail.com" class="contact-link">
-                <div class="icon"><i class="fas fa-envelope"></i></div>
-                <div>
-                  <h4>Email</h4>
-                  <p>nitinkumarkasturi@gmail.com</p>
-                </div>
-              </a>
-            </div>
+            <a
+              href="mailto:nitinkumarkasturi@gmail.com"
+              class="contact-info-card"
+            >
+              <div class="card-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <p>nitinkumarkasturi@gmail.com</p>
+              </div>
+            </a>
 
-            <div class="info-box clickable">
-              <a href="tel:+918320037190" class="contact-link">
-                <div class="icon"><i class="fas fa-phone"></i></div>
-                <div>
-                  <h4>Phone</h4>
-                  <p>+91 8320037190</p>
-                </div>
-              </a>
-            </div>
+            <a href="tel:+918320037190" class="contact-info-card">
+              <div class="card-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h4>Phone</h4>
+                <p>+91 83200 37190</p>
+              </div>
+            </a>
 
-            <h4>Connect on Social</h4>
+            <h4 class="contact-social-heading">Connect on Social</h4>
             <div class="social-buttons">
               <a
                 href="https://github.com/knitinnn"
                 target="_blank"
                 class="social-btn"
+                ><i class="fab fa-github"></i> GitHub</a
               >
-                <i class="fab fa-github"></i> GitHub
-              </a>
               <a
                 href="https://www.linkedin.com/in/kasturi-nitin-kumar-a55174250/"
                 target="_blank"
                 class="social-btn"
+                ><i class="fab fa-linkedin"></i> LinkedIn</a
               >
-                <i class="fab fa-linkedin"></i> LinkedIn
-              </a>
             </div>
-
-            <a
-              href="https://drive.google.com/file/d/1YqJoEUP0p_9u6lbtgcuMhxNozHDFuTn_/view"
-              target="_blank"
-              class="resume-btn"
-            >
-              <i class="fas fa-download"></i> Download Resume
-            </a>
           </div>
 
-          <div class="contact-right">
-            <h3>Send a Message</h3>
-
-            <form
-              id="contactForm"
-              class="contact-form"
-              action="https://api.web3forms.com/submit"
-              method="POST"
-            >
-              <input
-                type="hidden"
-                name="access_key"
-                value="dabac3a3-78db-43f6-a36a-125f02f824ec"
-              />
-
+          <div class="contact-right reveal">
+            <h3>Send Message</h3>
+            <form id="contactForm" action="https://formspree.io/f/your_formspree_id_here" method="POST" class="contact-form">
               <input
                 type="hidden"
                 name="subject"
                 value="New Portfolio Contact!"
-              />
-
-              <input
-                type="hidden"
-                name="redirect"
-                value="https://yourdomain.com/thank-you.html"
               />
 
               <div class="form-row">
@@ -390,18 +610,17 @@
                   type="text"
                   name="name"
                   id="name"
-                  placeholder="Name"
+                  placeholder="Your Name"
                   required
                 />
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  placeholder="Email"
+                  placeholder="Your Email"
                   required
                 />
               </div>
-
               <input
                 type="text"
                 name="subject"
@@ -409,42 +628,88 @@
                 placeholder="Subject"
                 required
               />
-
               <textarea
                 name="message"
                 id="message"
-                placeholder="Message"
-                rows="6"
+                placeholder="Your Message"
+                rows="5"
                 required
               ></textarea>
 
               <button type="submit" class="send-btn" id="sendBtn">
-                <span class="btn-text">
-                  <i class="fas fa-paper-plane"></i> Send Message
-                </span>
+                <span class="btn-text"
+                  ><i class="fas fa-paper-plane"></i> Send Message</span
+                >
                 <span class="btn-loader"></span>
               </button>
             </form>
           </div>
+
+          <!-- Success Popup Overlay -->
+          <div class="popup-overlay" id="popupOverlay"></div>
+
+          <!-- Success Popup -->
           <div id="successPopup">
             <p class="successPopup-msg">
-              Your message was sent successfully. I will get back to you soon.
+              ✓ Your message was sent successfully!<br />I'll get back to you
+              soon.
             </p>
-            <button id="closePopup">OK</button>
+            <button id="closePopup">Got it</button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ==================== Footer ==================== -->
-
     <footer class="footer">
       <div class="container footer-container">
-        <p>© 2025 Nitin Kumar. All rights reserved.</p>
+        <a href="#home" class="footer-logo">Nitin<span>.</span></a>
+
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/in/kasturi-nitin-kumar-a55174250/"
+            target="_blank"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/knitinnn"
+            target="_blank"
+            aria-label="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/k_nitinnn/"
+            target="_blank"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <!-- <a
+            href="https://x.com/k_nitinnn"
+            target="_blank"
+            aria-label="Twitter"
+            ><i class="fab fa-x-twitter"></i
+          ></a> -->
+        </div>
+
+        <div class="footer-divider"></div>
+        <p class="footer-copyright">
+          © 2025 Nitin Kumar Kasturi. All rights reserved.
+        </p>
       </div>
     </footer>
 
-    <button id="back-to-top" class="back-to-top">
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
       <i class="fas fa-arrow-up"></i>
     </button>
 

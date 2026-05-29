@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning Management System Case Study — Nitin Kumar Kasturi</title>
+    <meta
+      name="description"
+      content="Premium portfolio case study: An enterprise-grade Learning Management System consolidating 5 academic tools into a single platform for 180+ active users."
+    />
+    <link rel="icon" type="image/png" href="../../Images/logocircle.png" />
+
+    <!-- Google Fonts & FontAwesome -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../projects.css" />
+  </head>
+  <body class="project-body">
+    <!-- ==================== Case Study Sticky Navbar ==================== -->
+    <nav class="cs-nav">
+      <div class="container cs-nav-container">
+        <a href="../../index.html#projects" class="cs-back-btn">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <a href="../../index.html" class="logo" style="font-family: var(--font-heading); font-weight: 700; color: var(--text-primary);">
+          Nitin.dev
+        </a>
+      </div>
+      <div class="cs-scroll-progress"></div>
+    </nav>
+
+    <!-- ==================== Hero Section ==================== -->
+    <header class="cs-hero">
+      <div class="container">
+        <span class="cs-hero-badge">Product Case Study</span>
+        <h1 class="cs-hero-title">Learning Management System</h1>
+        <p class="cs-hero-summary">
+          Consolidating 5 fragmented tools into a single role-based academic portal, improving student assignment completion rates by 35% with real-time assessment engines.
+        </p>
+
+
+        <div class="cs-hero-ctas">
+          <a href="#" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="https://github.com/knitinnn" target="_blank" class="btn btn-secondary">
+            <i class="fab fa-github"></i> View GitHub
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== Overview Section ==================== -->
+    <section class="section-margin">
+      <div class="container">
+        <h2 class="cs-section-title">Project Overview</h2>
+        <div class="grid-2col" style="margin-top: var(--space-md);">
+          <div class="overview-box">
+            <h3>1. The Problem</h3>
+            <p>
+              A leading coaching institute was using five disparate tools to manage academic activities: separate services for assignments, chats, exams, live classes, and role permission levels. Instructors struggled with manual grade tallying, students missed deadlines, and admin controls suffered from security loop-holes and data duplication.
+            </p>
+          </div>
+          <div class="overview-box">
+            <h3>2. The Goal & Need</h3>
+            <p>
+              Develop a unified, enterprise-grade learning management portal with strict role-based authorization to secure academic processes. The platform needed to consolidate assessing engines, support instant instructor-student chat channels, and provide real-time grading reports to drive higher completion rates.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Key Features ==================== -->
+    <section class="section-margin">
+      <div class="container">
+        <h2 class="cs-section-title">Key Core Features</h2>
+        <div class="grid-3col" style="margin-top: var(--space-md);">
+          <div class="feature-card">
+            <div class="feature-content">
+              <h4>MCQ & Assessment Engine</h4>
+              <p>Dynamic assessment engine offering automatic real-time grading, instantaneous review, and performance analytics for students.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-content">
+              <h4>Socket.IO Live Chat</h4>
+              <p>Real-time chat modules facilitating instant messaging between students and instructors to clear doubts without third-party tools.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-content">
+              <h4>Granular RBAC Security</h4>
+              <p>Custom middleware authorizing 25+ access rules across Admin, Instructor, and Student profiles to prevent privilege escalation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Tech Stack Break down ==================== -->
+    <section class="section-margin">
+      <div class="container">
+        <h2 class="cs-section-title">Tech Stack Deep-Dive</h2>
+        <div class="tech-groups" style="margin-top: var(--space-md);">
+          <div class="tech-group-card">
+            <h4>Frontend Architecture</h4>
+            <div class="tech-list">
+              <span class="tech-list-badge">React.js</span>
+              <span class="tech-list-badge">CSS3 Modules</span>
+              <span class="tech-list-badge">Socket.IO Client</span>
+              <span class="tech-list-badge">HTML5</span>
+            </div>
+          </div>
+          <div class="tech-group-card">
+            <h4>Backend & Database</h4>
+            <div class="tech-list">
+              <span class="tech-list-badge">Node.js</span>
+              <span class="tech-list-badge">Express.js</span>
+              <span class="tech-list-badge">MySQL</span>
+              <span class="tech-list-badge">Sequelize ORM</span>
+              <span class="tech-list-badge">Socket.IO Server</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Development Process ==================== -->
+    <section class="section-margin">
+      <div class="container">
+        <h2 class="cs-section-title">Development Process</h2>
+        <div class="process-grid" style="margin-top: var(--space-md);">
+          <div class="process-card">
+            <div class="process-num">01</div>
+            <h4>Planning</h4>
+            <p>Interviewed institute operators, mapped workflows, and mapped 5 disparate data structures into 1 consolidated database model.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-num">02</div>
+            <h4>Architecture</h4>
+            <p>Designed strict database schemas, relations, and role access structures using database diagrams.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-num">03</div>
+            <h4>Development</h4>
+            <p>Built APIs incrementally in Express, developed the assessment engines, and wired React states.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-num">04</div>
+            <h4>Testing</h4>
+            <p>Executed extensive integration tests, checking student edge cases and role permission vulnerabilities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Lessons Learned ==================== -->
+    <section class="section-margin">
+      <div class="container">
+        <h2 class="cs-section-title">Lessons Learned</h2>
+        <div class="lessons-grid" style="margin-top: var(--space-md);">
+          <div class="lesson-card">
+            <h4><i class="fas fa-graduation-cap"></i> Trust the Server</h4>
+            <p>
+              Never rely on client-side state for access control. Always check authentication tokens and role databases on every API action, because client code can be modified easily in the browser.
+            </p>
+          </div>
+          <div class="lesson-card">
+            <h4><i class="fas fa-sliders-h"></i> Scalable Concurrency</h4>
+            <p>
+              Socket applications need clean connection handling and small JSON payloads. Sending large profile datasets triggers latency spikes that can crash client runtimes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA Footer ==================== -->
+    <section class="section-margin" style="padding-bottom: var(--space-xl);">
+      <div class="container">
+        <div class="cs-cta-box">
+          <h3>Interested in collaborating?</h3>
+          <p>Let's talk about how I can help you design, build, and deploy premium, production-ready Full Stack applications that deliver results.</p>
+          <div class="cs-cta-buttons">
+            <a href="../../projects/whatsapp-crm/index.html" class="btn btn-secondary">
+              View Next Case Study <i class="fas fa-arrow-right" style="margin-left: 6px;"></i>
+            </a>
+            <a href="../../index.html#contact" class="btn btn-primary">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Footer ==================== -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <p>© 2026 Nitin Kumar Kasturi. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../projects.js"></script>
+  </body>
+</html>

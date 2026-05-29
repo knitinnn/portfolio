@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp CRM Platform Case Study — Nitin Kumar Kasturi</title>
+    <meta
+      name="description"
+      content="Premium portfolio case study: A multi-tenant SaaS WhatsApp CRM platform handling automated campaign deliveries and anti-spam measures."
+    />
+    <link rel="icon" type="image/png" href="../../Images/logocircle.png" />
+
+    <!-- Google Fonts & FontAwesome -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../projects.css" />
+  </head>
+  <body class="project-body">
+    <!-- ==================== Case Study Sticky Navbar ==================== -->
+    <nav class="cs-nav">
+      <div class="container cs-nav-container">
+        <a href="../../index.html#projects" class="cs-back-btn">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <a href="../../index.html" class="logo" style="font-family: var(--font-heading); font-weight: 700; color: var(--text-primary);">
+          Nitin.dev
+        </a>
+      </div>
+      <div class="cs-scroll-progress"></div>
+    </nav>
+
+    <!-- ==================== Hero Section ==================== -->
+    <header class="cs-hero">
+      <div class="container">
+        <span class="cs-hero-badge">SaaS Case Study</span>
+        <h1 class="cs-hero-title">WhatsApp CRM Platform</h1>
+        <p class="cs-hero-summary">
+          A multi-tenant SaaS CRM integrating Baileys session automation, Puter AI content generation, and anti-spam rate limiting to manage contacts and dispatch automated campaigns.
+        </p>
+
+
+        <div class="cs-hero-ctas">
+          <a href="#" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+          <a href="https://github.com/knitinnn" target="_blank" class="btn btn-secondary">
+            <i class="fab fa-github"></i> View GitHub
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==================== Overview Section ==================== -->
+    <section class="section-margin">
+      <div class="container">
+        <h2 class="cs-section-title">Project Overview</h2>
+        <div class="grid-2col" style="margin-top: var(--space-md);">
+          <div class="overview-box">
+            <h3>1. The Problem</h3>
+            <p>
+              Small businesses frequently struggle to manage user contacts and send bulk campaign updates on WhatsApp without getting flagged or banned by WhatsApp’s algorithms. Relying on manual copy-pasting for regional translations or custom drafts resulted in massive overhead and campaign delays.
+            </p>
+          </div>
+          <div class="overview-box">
+            <h3>2. The Goal & Need</h3>
+            <p>
+              Develop a multi-tenant CRM that connects to WhatsApp via Baileys API to execute marketing broadcasts safely. It required an AI message generator for personalized customer outreach, support for regional translations, and robust anti-spam throttling filters.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Key Features ==================== -->
+    <section class="section-margin">
+      <div class="container">
+        <h2 class="cs-section-title">Key Core Features</h2>
+        <div class="grid-3col" style="margin-top: var(--space-md);">
+          <div class="feature-card">
+            <div class="feature-content">
+              <h4>Baileys Multi-device API</h4>
+              <p>Facilitates persistent, automated messaging directly from web app sessions, requiring only a simple WhatsApp Web QR scan.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-content">
+              <h4>Puter AI Drafting</h4>
+              <p>Generates contextual promotional text based on target attributes, cutting manual drafting requirements significantly.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-content">
+              <h4>Langbly Regional API</h4>
+              <p>Translates promotional campaigns automatically into 5+ regional languages to maximize contact conversions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Tech Stack Break down ==================== -->
+    <section class="section-margin">
+      <div class="container">
+        <h2 class="cs-section-title">Tech Stack Deep-Dive</h2>
+        <div class="tech-groups" style="margin-top: var(--space-md);">
+          <div class="tech-group-card">
+            <h4>Frontend & Integration</h4>
+            <div class="tech-list">
+              <span class="tech-list-badge">React.js</span>
+              <span class="tech-list-badge">Socket.IO Client</span>
+              <span class="tech-list-badge">HTML5/CSS3</span>
+              <span class="tech-list-badge">Puter AI API</span>
+            </div>
+          </div>
+          <div class="tech-group-card">
+            <h4>Backend & Engines</h4>
+            <div class="tech-list">
+              <span class="tech-list-badge">Node.js</span>
+              <span class="tech-list-badge">Express.js</span>
+              <span class="tech-list-badge">Baileys API</span>
+              <span class="tech-list-badge">MySQL</span>
+              <span class="tech-list-badge">Langbly API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Development Process ==================== -->
+    <section class="section-margin">
+      <div class="container">
+        <h2 class="cs-section-title">Development Process</h2>
+        <div class="process-grid" style="margin-top: var(--space-md);">
+          <div class="process-card">
+            <div class="process-num">01</div>
+            <h4>Planning</h4>
+            <p>Researched WhatsApp socket limitations, analyzed anti-ban patterns, and defined data requirements.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-num">02</div>
+            <h4>Architecture</h4>
+            <p>Designed token-bucket queue architectures to schedule campaign flows dynamically.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-num">03</div>
+            <h4>Development</h4>
+            <p>Built Baileys hook protocols, integrated the Puter AI messaging modules, and wired translations.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-num">04</div>
+            <h4>Testing</h4>
+            <p>Ran extensive rate limiting validations to ensure compliance with WhatsApp connection policies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Lessons Learned ==================== -->
+    <section class="section-margin">
+      <div class="container">
+        <h2 class="cs-section-title">Lessons Learned</h2>
+        <div class="lessons-grid" style="margin-top: var(--space-md);">
+          <div class="lesson-card">
+            <h4><i class="fas fa-shield-alt"></i> Rate Limit Discipline</h4>
+            <p>
+              When working with third-party messaging networks, strict rate limits are not optional. You must design asynchronous queues with jitter timings to protect client accounts.
+            </p>
+          </div>
+          <div class="lesson-card">
+            <h4><i class="fas fa-cogs"></i> Asynchronous Resilience</h4>
+            <p>
+              QR code and session dropouts are inevitable in long-running socket environments. Build automated reconnect handlers and stateless queue managers to avoid losing progress.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA Footer ==================== -->
+    <section class="section-margin" style="padding-bottom: var(--space-xl);">
+      <div class="container">
+        <div class="cs-cta-box">
+          <h3>Interested in collaborating?</h3>
+          <p>Let's talk about how I can help you design, build, and deploy premium, production-ready Full Stack applications that deliver results.</p>
+          <div class="cs-cta-buttons">
+            <a href="../../projects/lms/index.html" class="btn btn-secondary">
+              <i class="fas fa-arrow-left" style="margin-right: 6px;"></i> View Previous Case Study
+            </a>
+            <a href="../../index.html#contact" class="btn btn-primary">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Footer ==================== -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <p>© 2026 Nitin Kumar Kasturi. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../projects.js"></script>
+  </body>
+</html>
